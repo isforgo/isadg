@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de description d'archives (ISAD G)</title>
+    <link rel="stylesheet" href="">
+	<style>	
+		body {
+			font-family: sans-serif;
+			margin: 20px;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th, td {
+			padding: 5px;
+			border: 1px solid #ccc;
+			text-align: left;
+		}
+		th,.element{
+			text-align: center;
+			background-color : #add8e6;
+		}
+		textarea,.elementContenu{
+			background-color : #90ee90;
+		}
+
+		select {
+			width: 100%;
+			padding: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		input[type="text"],
+		input[type="date"],
+		
+		extarea {
+			width: 100%;
+			padding: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+	button {
+		background-color: #4CAF50;
+		color: white;
+		padding: 10px 20px;
+		border: none;
+		cursor: pointer;
+	}
+	
+	th, td, button {
+		margin : auto;
+	}
+	
+	
+	
+	button:hover {
+		background-color: #45a049;
+	}
+	
+	</style>
+</head>
+<body>
+    <h1>Formulaire de description d'archives (ISAD G)</h1>
+
+    <form action="" method="post">
+        <table>
+		
+            <tr><th colspan="2" texalign = "center" class: "element">Zone d'identification </th></tr>
+            
+			<tr>
+                <td>Référence / Identifiant / Cote </td>
+                <td><textarea placeholder="Pour une identification précise lors des échanges internationaux, il est necessaire d'inclure le code pays selon l'ISO 3166, le code du service d'archives selon la norme nationale, et le cote ou un autre identifiant spécifique. [Exemple : service d'archives de la société fictive Atlantis basée au Burkina qui aurait par exemple comme identifiant : SN-ATLARC]. Celui-ci sera la racine de tous les identifiants des articles et documents décrits ultérieurement aux niveaux inférieurs." name="avis" rows="5" cols="200" class: "elementContenu" ></textarea></td>
+            </tr>
+			<tr>
+                <td>Intitulé / Analyse</td>
+                <td><textarea placeholder="Indiquer le titre original du document ou créer un titre concis, respectant les règles de description multi-niveaux et les pratiques nationales. A bréger les titres longs sans perdre d'informations clés. Pour les titres forgées ou les analyses, inclure le nom du producteur au niveau supérieur et, aux niveau inférieurs, le nom de l'auteur, le type de document, et éventuellement l'action, l'objet ou le lieu de conservation. Différencier les titres originaux et forgés selon les conventions nationales ou linguistiques." name="avis" rows="5" cols="200" class: "elementContenu" ></textarea></td>
+            </tr>
+			
+			<tr>
+                <td>Dates</td>
+                <td><textarea placeholder="Indiquer au moins une des dates suivantes pour chaque unité de description : la période de rassemblement des documents par le producteur ou la date de création des documents, y compris les originaux, copies, éditions et pièces jointes. Préciser la nature de ces dates et, si nécessaire, ajouter d'autres dates conformes aux usages nationaux. Indiquer une ou plusieurs dates, comprenant les périodes entre deux dates de manière inclusive. " name="avis" rows="5" cols="200" class: "elementContenu" ></textarea></td>
+            </tr>
+			
+			<tr>
+                <td>Niveau de description</td>
+                <td>
+                    <select id="niveauDescription" name="niveauDescription">
+						<option value="">sélectionner un niveau </option>
+						<option value="fonds">Collection</option>
+						<option value="fonds">Fonds</option>
+                        <option value="sous-fonds">Sous-fonds</option>
+                        <option value="série">Série</option>
+						<option value="fonds">Sous-série</option>
+                        <option value="dossier">Dossier</option>
+                        <option value="pièce">Pièce</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Importance matérielle et support </td>
+                <td><textarea placeholder="Indiquer le nom normalisé, selon les normes nationales ou internationales et la norme ISAAR(CPF), de l'organisme ou de l'individu responsable de la création, de l'accroissement, ou de la conservation de l'unité de description. " name="avis" rows="5" cols="200" class: "elementContenu" ></textarea></td>
+            </tr>
+			
+			 <tr><th colspan="2" texalign = "center" class: "element">Zone du context </th></tr>
+            
+			<tr>
+			
+            <tr>
+                <td>Date de début</td>
+                <td><input type="date" id="dateDebut" name="dateDebut"></td>
+            </tr>
+            <tr>
+                <td>Date de fin</td>
+                <td><input type="date" id="dateFin" name="dateFin"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><button  type="submit">Soumettre</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
